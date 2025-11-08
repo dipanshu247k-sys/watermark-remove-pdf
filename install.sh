@@ -1,25 +1,11 @@
 #!/bin/bash
 
-pkg update -y && pkg upgrade -y
-pkg install -y python-pip termux-api python poppler gum git
-LDFLAGS="-L/system/lib/" CFLAGS="-I/data/data/com.termux/files/usr/include/" pip install --yes Pillow
-
-termux-setup-storage
-
-
-if [[ "$TERMUX_VERSION" == googleplay* ]]; then
-    echo "Termux is from Google Play Store version"
-    echo "You need F-droid edition of Termux"
-    echo 's|https://f-droid.org/en/packages/com.termux/|replacement|'
-    exit 0
-fi
-
+pkg install git 
 cd ~
 mkdir .watermark-remove-pdf
 cd .watermark-remove-pdf
-git clone --depth 1 https://github.com/dipanshu247k-sys/watermark-remove-pdf
+git clone --depth 1 https://github.com/dipanshu247k-sys/watermark-remove-pdf .
+chmod +x realinstall.sh
+bash realinstall.sh
 
 
-echo "alias='python ~/.watermark-remove-pdf'/img2pdf.py" >> ~/.bashrc
-echo "helpmeremove='python ~/.watermark-remove-pdf'/src/start.sh" >> ~/.bashrc
-exit
