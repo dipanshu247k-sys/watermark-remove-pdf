@@ -1,3 +1,4 @@
+#!/data/data/com.termux/files/usr/bin/bash
 #pkg update -y && pkg upgrade -y
 pkg install -y python-pip python ndk-sysroot clang make libjpeg-turbo
 LDFLAGS="-L/system/lib/" CFLAGS="-I/data/data/com.termux/files/usr/include/" pip install Pillow
@@ -11,9 +12,9 @@ if [[ "$TERMUX_VERSION" == googleplay* ]]; then
 fi
 
 
-pkg install -y termux-api poppler gum 
-
-echo "alias='python ~/.watermark-remove-pdf/img2pdf.py'" >> ~/.bashrc
-echo "helpmeremove='python ~/.watermark-remove-pdf/src/start.sh'" >> ~/.bashrc
-
+pkg install -y termux-api poppler gum qpdf
+echo "alias img2pdf='python ~/.watermark-remove-pdf/img2pdf.py'" >> ~/.bashrc
+echo "alias helpmeremove='python ~/.watermark-remove-pdf/src/start.sh'" >> ~/.bashrc
+mkdir ~/.cache-watermark-remover
+mkdir ~/.cache-watermark-remover/temp-images
 exit
