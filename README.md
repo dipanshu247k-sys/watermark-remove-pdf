@@ -2,7 +2,10 @@
 This Termux based tool aims to remove watermarks from image based pdfs quickly
 
 
-Installation Command : 
+Installation Command :    
+
+
+ 
 cd ~ &&
 mkdir .watermark-remove-pdf &&
 pkg install -y git &&
