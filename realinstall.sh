@@ -1,0 +1,19 @@
+#pkg update -y && pkg upgrade -y
+pkg install -y python-pip
+LDFLAGS="-L/system/lib/" CFLAGS="-I/data/data/com.termux/files/usr/include/" pip install Pillow
+termux-setup-storage
+
+
+if [[ "$TERMUX_VERSION" == googleplay* ]]; then
+    echo "Termux is from Google Play Store version"
+    echo "You need F-droid edition of Termux"
+    exit 0
+fi
+
+
+pkg install -y termux-api python poppler gum 
+
+echo "alias='python ~/.watermark-remove-pdf/img2pdf.py'" >> ~/.bashrc
+echo "helpmeremove='python ~/.watermark-remove-pdf/src/start.sh'" >> ~/.bashrc
+
+exit
