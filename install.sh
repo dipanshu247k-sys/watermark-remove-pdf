@@ -22,3 +22,4 @@ git clone --depth 1 https://github.com/dipanshu247k-sys/watermark-remove-pdf
 
 echo "alias='python ~/.watermark-remove-pdf'/img2pdf.py" >> ~/.bashrc
 echo "helpmeremove='python ~/.watermark-remove-pdf'/src/start.sh" >> ~/.bashrc
+exit
