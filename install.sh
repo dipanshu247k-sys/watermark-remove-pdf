@@ -1,8 +1,8 @@
 #!/bin/bash
 
 pkg update -y && pkg upgrade -y
-LDFLAGS="-L/system/lib/" CFLAGS="-I/data/data/com.termux/files/usr/include/" pip install --yes Pillow
-pkg install -y termux-api python poppler gum
+# LDFLAGS="-L/system/lib/" CFLAGS="-I/data/data/com.termux/files/usr/include/" pip install --yes Pillow
+# pkg install -y termux-api python poppler gum
 
 termux-setup-storage
 
