@@ -33,7 +33,8 @@ qpdf "$file_name" "$output_processed"
 pdfimages -j "processed_${file_name}" temp-images/A
 
 # Convert images back to PDF using array for proper file handling
-python ~/.watermark-remove-pdf/img2pdf.py temp-images/*.jpg -o ~/"$file_name"
+
+python ~/.watermark-remove-pdf/img2pdf.py $(ls -v temp-images/*.jpg) -o ~/"$file_name"
 mv ~/"$file_name" /storage/emulated/0/Documents/
 
 rm -rf *
