@@ -1,5 +1,5 @@
 #pkg update -y && pkg upgrade -y
-pkg install -y python-pip
+pkg install -y python-pip python ndk-sysroot clang make libjpeg-turbo
 LDFLAGS="-L/system/lib/" CFLAGS="-I/data/data/com.termux/files/usr/include/" pip install Pillow
 termux-setup-storage
 
@@ -11,7 +11,7 @@ if [[ "$TERMUX_VERSION" == googleplay* ]]; then
 fi
 
 
-pkg install -y termux-api python poppler gum 
+pkg install -y termux-api poppler gum 
 
 echo "alias='python ~/.watermark-remove-pdf/img2pdf.py'" >> ~/.bashrc
 echo "helpmeremove='python ~/.watermark-remove-pdf/src/start.sh'" >> ~/.bashrc
