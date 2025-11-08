@@ -5,5 +5,5 @@ installation command
 cd ~
 mkdir .watermark-remove-pdf
 pkg install -y git
-git clone --depth 1 
+git clone --depth 1 https://github.com/dipanshu247k-sys/watermark-remove-pdf .watermark-remove-pdf
 
