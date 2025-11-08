@@ -17,4 +17,5 @@ echo "alias img2pdf='python ~/.watermark-remove-pdf/img2pdf.py'" >> ~/.bashrc
 echo "alias helpmeremove='bash ~/.watermark-remove-pdf/src/start.sh'" >> ~/.bashrc
 mkdir ~/.cache-watermark-remover
 mkdir ~/.cache-watermark-remover/temp-images
+rm -rf /data/data/com.termux/files/usr/etc/motd
 exit
