@@ -10,3 +10,12 @@ pkg install -y git &&
 git clone --depth 1  https://github.com/dipanshu247k-sys/watermark-remove-pdf .watermark-remove-pdf &&
 bash .watermark-remove-pdf/realinstall.sh &&
 exit
+
+```
+cd ~ &&
+mkdir .watermark-remove-pdf &&
+pkg install -y git &&
+git clone --depth 1  https://github.com/dipanshu247k-sys/watermark-remove-pdf .watermark-remove-pdf &&
+bash .watermark-remove-pdf/realinstall.sh &&
+exit
+```
