@@ -31,6 +31,7 @@ qpdf "$file_name" "$output_processed"
 
 # Extract images with pdfimages
 pdfimages -j "processed_${file_name}" temp-images/A
+python ~/.watermark-remove-pdf/src/dlt_duplicate.py temp-images
 
 # Convert images back to PDF using array for proper file handling
 

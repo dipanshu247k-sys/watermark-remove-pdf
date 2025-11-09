@@ -13,7 +13,7 @@ fi
 
 
 pkg install -y termux-api poppler gum qpdf
-echo "alias img2pdf='python ~/.watermark-remove-pdf/img2pdf.py'" >> ~/.bashrc
+echo "alias img2pdf='python ~/.watermark-remove-pdf/src/img2pdf.py'" >> ~/.bashrc
 echo "alias helpmeremove='bash ~/.watermark-remove-pdf/src/start.sh'" >> ~/.bashrc
 mkdir ~/.cache-watermark-remover
 mkdir ~/.cache-watermark-remover/temp-images
