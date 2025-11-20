@@ -22,15 +22,15 @@ cd ~/.cache-watermark-remover
 # Copy file with proper quoting
 cp "$file_loc" "$file_name"
 
-echo "FILE LOCATION: $file_loc"
-echo "FILE NAME: $file_name"
+# echo "FILE LOCATION: $file_loc"
+# echo "FILE NAME: $file_name"
 
 # Process with qpdf - generate output name properly
-output_processed="processed_${file_name}"
-qpdf "$file_name" "$output_processed"
+# output_processed=$file_name
+# qpdf "$file_name" "$output_processed"
 
 # Extract images with pdfimages
-pdfimages -j "processed_${file_name}" temp-images/A
+pdfimages -j "$file_name" temp-images/A
 python ~/.watermark-remove-pdf/src/dlt_duplicate.py temp-images
 
 # Convert images back to PDF using array for proper file handling
