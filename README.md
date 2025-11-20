@@ -13,5 +13,5 @@ exit
 ```
 For Updating
 ```
-cd ~/.watermark-remove-pdf && git pull --rebase
+cd ~/.watermark-remove-pdf && git stash && git pull --rebase
 ```
