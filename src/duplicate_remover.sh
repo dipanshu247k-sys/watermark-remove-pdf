@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 
 # Define the directory to scan (current directory if no argument provided)
 TARGET_DIR="${1:-.}"
@@ -28,4 +28,3 @@ xargs -I {} rm -v "{}"
 
 echo "Duplicate detection and removal simulation complete."
 echo "To perform actual deletion, remove 'echo' from the 'xargs' command."
-
