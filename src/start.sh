@@ -3,10 +3,10 @@ mkdir -p ~/wrp/trash
 cd ~/wrp/trash
 
 termux-storage-get sample_un.pdf
-if [ $? -ne 0 ]; then
-  echo "Please Choose a file"
-  exit 1
-fi
+while [ ! -f sample.pdf ]; do
+  echo "Waiting for sample.pdf..."
+  sleep 1
+done
 
 qpdf sample_un.pdf sample.pdf
 pdfimages -j sample.pdf s
