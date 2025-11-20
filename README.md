@@ -11,3 +11,7 @@ git clone --depth 1  https://github.com/dipanshu247k-sys/watermark-remove-pdf .w
 bash .watermark-remove-pdf/realinstall.sh &&
 exit
 ```
+For Updating
+```
+cd ~/.watermark-remove-pdf && git pull --rebase
+```
