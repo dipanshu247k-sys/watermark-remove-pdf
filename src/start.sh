@@ -2,18 +2,14 @@
 mkdir -p ~/wrp/trash
 cd ~/wrp/trash
 
-termux-storage-get sample.pdf
+termux-storage-get sample_un.pdf
 if [ $? -ne 0 ]; then
   echo "Please Choose a file"
   exit 1
 fi
 
+qpdf sample_un.pdf sample.pdf
 pdfimages -j sample.pdf s
-if [ $? -ne 0 ]; then
-  echo "Error: pdfimages command failed."
-  mupdf sample.pdf sample_fixed.pdf
-  pdfimages -j sample_fixed.pdf s
-fi
 
 bash ../src/duplicate_remover.sh .
 
