@@ -1,7 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-
-
 # Get file location from gum
 file_loc=$(gum file /storage/emulated/0/)
 
@@ -31,7 +29,7 @@ cp "$file_loc" "$file_name"
 
 # Extract images with pdfimages
 pdfimages -j "$file_name" temp-images/A
-python ~/.watermark-remove-pdf/src/dlt_duplicate.py temp-images
+bash ~/.watermark-remove-pdf/src/duplicate_remover temp-images
 
 # Convert images back to PDF using array for proper file handling
 

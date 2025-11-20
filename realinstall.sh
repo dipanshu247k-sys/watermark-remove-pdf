@@ -2,7 +2,7 @@
 #pkg update -y && pkg upgrade -y
 pkg install -y python-pip python ndk-sysroot clang make libjpeg-turbo
 LDFLAGS="-L/system/lib/" CFLAGS="-I/data/data/com.termux/files/usr/include/" pip install Pillow
-termux-setup-storage
+pip install Pillow
 
 
 if [[ "$TERMUX_VERSION" == googleplay* ]]; then
@@ -18,4 +18,5 @@ echo "alias helpmeremove='bash ~/.watermark-remove-pdf/src/start.sh'" >> ~/.bash
 mkdir ~/.cache-watermark-remover
 mkdir ~/.cache-watermark-remover/temp-images
 rm -rf /data/data/com.termux/files/usr/etc/motd
+termux-setup-storage
 exit
