@@ -3,7 +3,7 @@ mkdir -p ~/wrp/trash
 cd ~/wrp/trash
 
 termux-storage-get sample_un.pdf
-while [ ! -f sample.pdf ]; do
+while [ ! -f sample_un.pdf ]; do
   echo "Waiting for sample.pdf..."
   sleep 1
 done
