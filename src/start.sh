@@ -25,8 +25,8 @@ python ~/wrp/src/img2pdf.py $(ls -v *.jpg) -o "$filename"
 mkdir -p /storage/emulated/0/Documents/processed/
 mv "$filename" /storage/emulated/0/Documents/processed/
 
-termux-open /storage/emulated/0/Documents/processed/"$filename"
 
 rm -rf *
+termux-open /storage/emulated/0/Documents/processed/"$filename"
 
 echo "Check /storage/Documents/processed/$filename"
