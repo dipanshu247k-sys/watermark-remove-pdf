@@ -1,1 +1,1 @@
-bash ~/wrp/src/start.sh
+bash ~/wrp/src/start.sh "$1"

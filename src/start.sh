@@ -8,10 +8,14 @@ while [ ! -f sample_un.pdf ]; do
   sleep 1
 done
 
-qpdf sample_un.pdf sample.pdf
+if [ "$1" = "fix" ]; then
+    qpdf sample_un.pdf sample.pdf
+else
+    mv sample_un.pdf sample.pdf
+fi
 pdfimages -j sample.pdf s
 
-bash ../src/duplicate_remover.sh .
+bash ../src/duplicate_remover.sh
 
 read -p "Enter the filename: " filename
 filename="$filename".pdf
