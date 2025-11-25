@@ -1,5 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 cd ~/wrp
+pkg update
 pkg install -y python libjpeg-turbo termux-api poppler qpdf
 pip install Pillow
 rm -rf /data/data/com.termux/files/usr/etc/motd
